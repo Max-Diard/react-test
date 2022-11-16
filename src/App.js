@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Movie from './components/Movie';
+import data from './data/movieData.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      "index": 0
+    }
+  }
+
+  filterMovie = () =>{
+    console.log("toudoum");
+    // console.log(data.filter(x => x.includes("j")).map)
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <Header />
+        <input id="search-movie" onInput={this.filterMovie}></input>
+        <main>
+          {data.map ((m,i) => <Movie {...m} key={i}/>)}
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,54 @@
+.title-page{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: rgb(7, 36, 90);
+}
+
+.baseline-page{
+    font-size: 25px;
+    color: rgb(97, 18, 18);
+}
+
+.movie-img{
+    max-width: 150px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 1rem;
+}
+
+.movie-title{
+    text-decoration: underline;
+}
+
+.movie-director{
+    font-weight: bold;
+}
+
+.movie-item{
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px black;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #5bb5d8;
+    color: white;
+}
+
+.img-grid{
+    display: flex;
+    row-gap: 2em;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
